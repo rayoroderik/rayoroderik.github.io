@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Padelicano</title>
+    <style>
+        :root {
+            --theme-blue: rgb(0, 128, 230);
+            --background: #f9f9f9;
+            --text: #333;
+            --border: #ddd;
+            --card-bg: white;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--background);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: var(--theme-blue);
+        }
+        
+        h2 {
+            color: var(--theme-blue);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-form {
+            display: grid;
+            gap: 15px;
+        }
+        
+        label {
+            font-weight: bold;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+            background-color: var(--card-bg);
+            color: var(--text);
+        }
+        
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        button {
+            background-color: var(--theme-blue);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+        
+        button:hover {
+            background-color: rgb(0, 100, 200);
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .direct-contact {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+            border-left: 4px solid var(--theme-blue);
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #222;
+                --text: #f0f0f0;
+                --border: #444;
+                --card-bg: #333;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .contact-form {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Padelicano Support</h1>
+            <p>We're here to help with any questions or issues you might have.</p>
+        </header>
+
+        <section class="card">
+            <h2>Contact Form</h2>
+            <form class="contact-form" action="mailto:support@padelicano.com" method="post" enctype="text/plain">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div>
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject">
+                        <option value="Bug Report">Bug Report</option>
+                        <option value="Feature Request">Feature Request</option>
+                        <option value="Tournament Setup Help">Tournament Setup Help</option>
+                        <option value="Scoring Issues">Scoring Issues</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section class="direct-contact">
+            <h3>Direct Contact</h3>
+            <p>You can also reach us directly at: <strong>support@padelicano.com</strong></p>
+            <p>We typically respond within 24-48 hours.</p>
+        </section>
+
+        <section>
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I create a new tournament?</div>
+                <div class="faq-answer">To create a new tournament, tap the "Create tournament" button on the main screen. Enter the tournament name, select the tournament type (Americano, Mexicano, or Mixicano), set points per round, and add player information.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What are the different tournament types?</div>
+                <div class="faq-answer">
+                    <p><strong>Americano:</strong> Players rotate partners after each round, allowing everyone to play with and against different people.</p>
+                    <p><strong>Mexicano:</strong> Players are paired based on their current ranking, with stronger players facing stronger opponents.</p>
+                    <p><strong>Mixicano:</strong> A hybrid format combining elements of both Americano and Mexicano, with an emphasis on mixed gender pairings.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How does scoring work?</div>
+                <div class="faq-answer">Each match is played to a predetermined number of points (by default 24). Players accumulate points individually across all rounds. The player with the highest total points at the end of the tournament is the winner.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I add or remove players?</div>
+                <div class="faq-answer">Players can be added during tournament creation. Currently, players cannot be added or removed once a tournament has started to maintain score integrity.</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Troubleshooting Tips</h2>
+            
+            <div class="card">
+                <h3>Tournament Creation Issues</h3>
+                <ul>
+                    <li>Ensure you have at least 4 players added</li>
+                    <li>For Mixicano tournaments, verify you have an equal number of male and female players</li>
+                    <li>Check that all required fields are completed</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>Score Tracking Problems</h3>
+                <ul>
+                    <li>If scores are not updating, try exiting the match view and returning</li>
+                    <li>Ensure you have the latest app version</li>
+                    <li>Verify the total match points do not exceed the points per round setting</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>App Information</h2>
+            <p>Current Version: 1.2.0</p>
+            <p>Last Updated: May 5, 2025</p>
+            <p>Supported Devices: iOS 15.0+ and Android 10.0+</p>
+        </section>
+    </div>
+</body>
+</html>
